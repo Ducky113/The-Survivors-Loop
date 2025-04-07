@@ -1,0 +1,166 @@
+### **1. Inventory System**
+
+- Read a text file, making a dictionary with keys being item names & values being their amount.
+- Helps with saving progress as well.
+
+---
+
+### **2. Weather System**
+
+- **Types:**
+    - Rain
+    - Scorching heat
+    - Windy
+    - Peaceful
+    - Cold
+    
+- Should work on a randomized basis with certain weather combos having extra effects.
+
+- each weather has a few attributes namely, differing spawns, abundance/scarcity of certain resources as well as effects on the playable character.
+
+---
+
+### **3. Day/Night System**
+
+Each day is divided into roughly **four phases**:
+
+- **Morning:** More animals, easiest to see/be seen, animals more alert, low number of enemies.
+
+- **Dawn:** Fewer animals, harder to see/be seen, animals have lowest alert levels, very few high-level mobs.
+
+- **Dusk:** Animals remain the same, mob encounters increase, high-level mobs start emerging.
+
+- **Night:** No animals or very few, more mobs (increases non-food drops), highest-level guardians start coming.
+
+---
+
+### **4. Locations**
+
+Total **4 places**:
+
+- **Starter island (beach)**
+- **Forest**
+- **Caves**
+- **End Zone**
+
+---
+
+### **5. Crafting System**
+
+- Items are stored inside a **list** and the whole interface can be displayed using **Tkinter** (with a search bar).
+
+- **Things that can’t be made →** has a red border with red text and hovering on it allows you to see what items you lack
+
+- **Things that can be made →** has a black border and left-clicking on it gives a prompt on how many to make while hovering over it shows you what items are needed and how many you have of each
+
+- Right-Clicking on an item shows the **recipe**.
+
+---
+
+### **6. Skill Tree**
+
+- **10 skills** can be unlocked at the start (**non-refundable**).
+- Every level grants **1 skill of choice**.
+- Skills can be broadly categorized into different **levels**, gradually shifting from one to another.
+- These are the following skills :
+    - strength
+        - allows you to carry more stuff
+        - deal more damage to enemies
+        - full strength allows you to scare single encounters (decreases total encounters but the encounters you have have a higher chance of being with more than 1 mob)
+    - mental fortitude
+        - have more insanity.
+        - predators don’t cause paranoia and are hence able to hide your presence better.
+        - full mental allows you to not be prone to paranoia
+    - dexterity
+        - increased speed and stamina
+        - full dexterity allows you to successfully outrun any encounter
+        - paranoia doesn’t decrease speed/stamina
+    - luck
+        - increased probability of escaping encounters and getting good weather
+        - full luck unlocks dices which let’s you more easily choose the conditions of your choosing. (you choose what the faces of the die are with a max limit of 3 on one type)
+        - you also have a higher chance of critical hits
+    - intelligence
+        - you are more accurately able to identify good sources of foods
+        - better at crafting
+        - full intel allows gives you more options when completing tasks which would not be previously available.
+
+---
+
+### 7. Story
+
+(*No details provided yet*)
+
+---
+
+### **8. Effects**
+
+- The player can have the following effects applied on him :
+    1. Dehydration (one week of survival)
+        1. Lowers stamina by 25% (day 1)
+        2. Lowers speed by 10%
+        3. Continues onto now making the player not being able to identify predators (snake mistaken for a vine), also encounters cause higher damage onto you. mental functions hindered such as loss of being able to differentiate between poisonous and healthy berries. **stamina is now only 50% or original and going down by a value of 10% per day** (day 4)
+        4. Death. (day 7)
+    2. Hunger
+        1. Lowers Stamina by 33% (day1)
+        2. Lowers speed 20%
+        3. Can carry only 50% of original weight (day2) (goes down by 5% per day)
+        4. Gain a higher risk of contracting diseases thru untreated sources (2x) (day 4)
+        5. Wounds now take 1.5x original time to heal (day 4)
+        6. Hallucinations now start taking effect (day 7)
+        7. After week 1 you will now experience re-feeding syndrome
+            1. Re-feeding syndrome makes it so that eating in bulk after being starved for 1 week causes damage and further depletes the players total health by 10 hit points each day.
+            2. The only way to recover from it is through recovering your hunger by max of 5% each day.
+        8. Death (2 weeks)
+    3. Encumbered
+        1. Speed becomes 50%
+        2. stamina depletion is 20% faster
+    4. Poison
+        1. you lose 5hp per her
+        2. may have a chance of hallucination 
+        3. very rare of the poison being so potent that it causes you to amputate (amputation works for a duration of 2 weeks)
+    5. Wound on the leg
+        1. lowers movement speed
+        2. takes the least hp from you
+        3. can happen due to animals/insects/snakes as well as rocks
+    6. Wound on the chest
+        1. causes a lot of damage
+        2. lessens stamina and speed
+        3. can happen due to mobs or due to falling from great heights
+    7. Wound on the head
+        1. causes the most damage
+        2. may be named as a concussion
+        3. may increase craft times or degrade the tools crafted
+    8. Wound on the hands
+        1. causes lease damage
+        2. may increase crafting time depending on severity
+        3. unless treated may also not allow you to complete dual hand activities or cause damage when you do
+    9. Insanity
+        1. caused due to predators
+        2. increases the more you run away from encounters(paranoia)
+        3. causes you to hallucinate
+        4. leads to a decrease in stamina as well increases your visibility to night-crawlers
+
+---
+
+### 9. Player Attributes
+
+- Total HP :
+- Stamina
+- Consumption of stamina for activities
+- Base damages
+- Effects Handling
+
+---
+
+### 10. Game-play Loop
+
+1. Main Menu
+2. Main story progression
+3. Diary :
+    - Stats Menu
+    - Crafting Menu
+    - Inventory system
+    - Location list
+4. Encounters
+5. Weather and time tab
+6. Effects tab
